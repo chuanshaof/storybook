@@ -3,7 +3,7 @@ import { expect, userEvent, within } from '@storybook/test';
 import { Page } from '../src/Page';
 
 export default {
-  title: 'Organisms/Page',
+  title: 'Pages/Page',
   component: Page,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout

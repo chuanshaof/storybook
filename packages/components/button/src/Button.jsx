@@ -7,16 +7,18 @@ import { Button as MuiButton } from '@mui/material';
 
 /** Primary UI component for user interaction */
 export const Button = ({
-  primary = false,
-  size = 'small',
   label,
+  type = 'primary',
+  size = 'small',
   className = "navi-button",
+  onClick,
   ...props // Intended for stuff like data-testid, etc
 }) => {
   return (
     <MuiButton
       type="button"
       className={className}
+      onClick={onClick}
       {...props}
     >
       {label}
@@ -25,6 +27,8 @@ export const Button = ({
 };
 
 Button.propTypes = {
+  /** Button contents */
+  label: PropTypes.string.isRequired,
   type: PropTypes.oneOf([
     'primary',
     'primary-reversed',
@@ -41,8 +45,6 @@ Button.propTypes = {
   ]),
   /** How large should the button be? */
   size: PropTypes.oneOf(['small', 'large']),
-  /** Button contents */
-  label: PropTypes.string.isRequired,
   /** Optional className */
   className: PropTypes.string,
   /** Optional click handler */
