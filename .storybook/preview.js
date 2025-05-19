@@ -2,7 +2,7 @@
 
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { withThemeFromJSXProvider } from '@storybook/addon-themes';
-import theme from '../packages/themes/theme';
+import theme from '../themes/theme';
 
 export const decorators = [
   withThemeFromJSXProvider({
