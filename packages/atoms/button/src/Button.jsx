@@ -10,8 +10,8 @@ export const Button = ({
   primary = false,
   size = 'small',
   label,
-  className="navi-button",
-  ...props // Intended for stuff like className, etc
+  className = "navi-button",
+  ...props // Intended for stuff like data-testid, etc
 }) => {
   return (
     <MuiButton
